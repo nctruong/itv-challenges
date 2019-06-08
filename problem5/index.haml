@@ -1,0 +1,7 @@
+%table
+  %thead
+    %tr
+      %th User
+      %th Post title
+  %tbody
+    = render partial: 'post', collection: @posts, cached: -> post { [post, post.user.updated_at] }
